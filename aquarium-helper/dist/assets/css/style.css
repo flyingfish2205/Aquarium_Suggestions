@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+@font-face{
+	font-family: 'melodica';
+	src: url('/assets/MedodicaRegular.otf') format('opentype');
+	font-weight: normal;
+	font-size: normal;
+}
+
+body {
+	background-color: #014421;
+	color: #fff;
+	font-family: 'melodica','Courier New', Courier, monospace, 'Segoe UI', 'Roboto',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+a,
+a:visited,
+a[href] {
+	color: #61dafb;
+}
+
+#site {
+	text-align: center;
+}
+
+.header{
+	background-color: #082416;
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.main{
+	margin-top:5%;
+	margin-bottom: 5%;
+}
+
+.button_design{
+	margin-left: 50%;
+}
+
+.button_shape{
+	background-color: #082416;
+	color:#fff;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right:5%;
+	padding-left:5%;
+	margin-bottom: 5%;
+	border: dotted;
+}
