@@ -1,16 +1,21 @@
-async function createResults(){
-    var tankSize = document.getElementById("tank-size").value;
-    var experienceLevel = document.getElementById("biotope").value;
-    var biotope = document.getElementById("level").value;
-    var div = document.getElementById("output");
-    var suggestion1 = document.getElementById("sug1");
-    var suggestion2 = document.getElementById("sug2");
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function createResults(){
+    var tankSize = document.getElementById('tank-size').value;
+    var experienceLevel = document.getElementById('level').value;
+    var biotope = document.getElementById('biotope').value;
+    var div = document.getElementById('output');
+    var suggestion1 = document.getElementById('sug1');
+    var suggestion2 = document.getElementById('sug2');
+    suggestion1.innerHTML = "";
     var son = {
         "beginner1": [
-          "Honey gourami, Japanese Ricefish, Female Betta"
+          "Honey gourami", "Japanese Ricefish", "Female Betta"
         ],
         "beginner2": [
-          "Neon Tetra, Cardinal Tetra, Harlequin Rasbora"
+          "Neon Tetra", "Cardinal Tetra", "Harlequin Rasbora"
         ],
         "intermediate1": [
           "Betta",
@@ -34,20 +39,26 @@ async function createResults(){
         ]
       }
     
-    if(experienceLevel == "beginner"){
-      suggestion1.append(${son['beginner1'][Math.random*2]});
-      suggestion2.append();
+    if(experienceLevel == "1"){
+      suggestion1.append("Suggestion 1: ");
+      suggestion1.append(son["beginner1"][getRandomInt(3)]);
+      suggestion1.append("; Suggestion 2: ");
+      suggestion1.append(son["beginner2"][getRandomInt(3)]);
     }
 
-    if(experienceLevel == "intermediate"){
-      suggestion1.append();
-      suggestion2.append();
+    if(experienceLevel == "2"){
+      suggestion1.append("Suggestion 1: ");
+      suggestion1.append(son["intermediate1"][getRandomInt(3)]);
+      suggestion1.append("; Suggestion 2: ");
+      suggestion1.append(son["intermediate2"][getRandomInt(3)]);
 
     }
 
-    if(experienceLevel == "advanced"){
-      suggestion1.append();
-      suggestion2.append();
+    if(experienceLevel == "3"){
+      suggestion1.append("Suggestion 1: ");
+      suggestion1.append(son["advanced1"][getRandomInt(3)]);
+      suggestion1.append("; Suggestion 2: ");
+      suggestion1.append(son["advanced2"][getRandomInt(3)]);
         
     }
     
